@@ -1,0 +1,51 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// header,
+body {
+  // font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.arrows {
+  display: flex;
+  gap: 10px;
+}
+.arrow-after,
+.arrow-next {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  background-color: #133d8d;
+  background-repeat: no-repeat;
+}
+.arrow-after {
+  background-position: center;
+  background-image: url(../images/arrow-left.svg);
+}
+.arrow-next {
+  background-position: center;
+  background-image: url(../images/arrow-right.svg);
+}
