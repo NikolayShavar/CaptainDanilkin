@@ -15,15 +15,28 @@ const ttf2woff2 = require("gulp-ttf2woff2");
 const svgSprite = require("gulp-svg-sprite");
 const include = require("gulp-include");
 
+// function pages() {
+//   return src("app/pages/*.html")
+//     .pipe(
+//       include({
+//         includePaths: "app/components",
+//       })
+//     )
+//     .pipe(dest("app"))
+//     .pipe(browserSync.stream());
+// }
+
 function pages() {
-  return src("app/pages/*.html")
-    .pipe(
-      include({
-        includePaths: "app/components",
-      })
-    )
-    .pipe(dest("app"))
-    .pipe(browserSync.stream());
+  return (
+    src("app/pages/*.html")
+      .pipe(
+        include({
+          includePaths: "app/components",
+        })
+      )
+      .pipe(dest("app"))
+      .pipe(browserSync.stream())
+  );
 }
 
 function fonts() {

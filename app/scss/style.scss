@@ -28,7 +28,9 @@
 
 .header__logo {
   padding-right: 10px;
+  cursor: pointer;
 }
+
 .header__top {
   display: flex;
   justify-content: space-between;
@@ -1202,12 +1204,12 @@ footer {
 }
 
 .services-box{
-
   position: relative;
   padding-top: 250px;
+  z-index: -1;
 }
 
-.services-title{
+.page-title{
 font-size: 32px;
 font-style: normal;
 font-weight: 700;
@@ -1217,7 +1219,7 @@ text-transform: uppercase;
 margin-bottom: 60px;
 }
 
-.services-path{
+.page-path{
 font-weight: 500;
 line-height: 140%;
 }
@@ -1308,5 +1310,8 @@ gap: 35px;
   line-height: 140%;
 }
 
+.map{
+  height: 100px;
+}
 
 @import "_media";
