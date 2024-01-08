@@ -16,8 +16,8 @@
   color: #fff;
   text-wrap: nowrap;
 }
-.header-blue{
-  background-color: #133D8D;
+.header-blue {
+  background-color: #133d8d;
 }
 
 .header.open .header__bottom {
@@ -1203,84 +1203,82 @@ footer {
   }
 }
 
-.services-box{
+.services-box,
+.career-box,
+.map-box {
   position: relative;
   padding-top: 250px;
   z-index: -1;
 }
 
-.page-title{
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: 140%;
-letter-spacing: 1.6px;
-text-transform: uppercase;
-margin-bottom: 60px;
+.page-title {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
 }
 
-.page-path{
-font-weight: 500;
-line-height: 140%;
+.page-path {
+  font-weight: 500;
+  line-height: 140%;
 }
-.services-text{
+
+.services-text {
   display: flex;
 }
-.services-text__main{
+.services-text__main {
   max-width: 746px;
-
 }
 
-.services-front__text{
+.services-front__text {
   border-left: 2px solid #bd0007;
   display: flex;
-width: 746px;
-padding: 5px 80px 5px 40px;
-align-items: center;
-margin-top: 60px;
-margin-bottom: 60px;
-p{
-  font-size: 14px;
-font-weight: 400;
-line-height: 140%;
+  width: 746px;
+  padding: 5px 80px 5px 40px;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+  }
 }
+.services-text__item {
+  display: flex;
+  flex-direction: column;
 }
-.services-text__item{
-display: flex;
-flex-direction: column;
-}
-.services-text__title{
-
+.services-text__title {
   font-size: 18px;
-font-weight: 700;
-line-height: 140%;
-letter-spacing: 0.9px;
-text-transform: uppercase;
-padding-bottom: 30px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  padding-bottom: 30px;
 }
-.services-text__text{
+.services-text__text {
   font-size: 14px;
-font-weight: 400;
-line-height: 140%;
-margin-bottom: 60px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 60px;
 }
 
-
-
-
-.services-characteristics{
+.services-characteristics {
   display: flex;
   position: absolute;
   right: 0;
-  background-color: #133D8D;
+  background-color: #133d8d;
   color: #fff;
   max-width: 524px;
-padding: 50px 60px 60px 60px;
-flex-direction: column;
-align-items: flex-start;
-gap: 25px;
+  padding: 50px 60px 60px 60px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
 }
-.services-characteristics__title{
+.services-characteristics__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 140%;
@@ -1288,30 +1286,123 @@ gap: 25px;
   text-transform: uppercase;
 }
 
-.services-characteristics__colums{
-display: flex;
+.services-characteristics__colums {
+  display: flex;
 }
 
-.services-characteristics__column{
+.services-characteristics__column {
   display: flex;
   flex-direction: column;
-gap: 35px;
+  gap: 35px;
 }
 
-.services-characteristics__number{
+.services-characteristics__number {
   font-size: 64px;
   font-weight: 900;
   line-height: 140%;
   text-transform: uppercase;
 }
-.services-characteristics__text{
+.services-characteristics__text {
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
 }
 
-.map{
+.map {
   height: 100px;
+}
+
+.vacancies-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-bottom: 45px;
+}
+
+.vacancies-box {
+  padding-top: 60px;
+}
+.vacancies-box:last-child{
+padding-bottom: 150px;
+}
+
+.vacancies-items {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 24px;
+  .vacancies-item {
+    border: 1px solid rgba(51, 51, 51, 0.30);
+    padding: 35px 40px;
+
+
+
+
+
+
+    &__name {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 140%;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding-bottom: 25px;
+    }
+    &__vessel{
+      display: flex;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      padding-bottom: 15px;
+    }
+    &__contract {
+      display: flex;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      padding-bottom: 25px;
+    }
+
+    &__button {
+      background-color: #133d8d;
+      display: flex;
+      padding: 15px;
+      justify-content: center;
+      align-items: center;
+      width: 101px;
+      height: 37px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 140%;
+      right: 0;
+    }
+  }
+}
+.vacancies-item__vessel::before{
+content: "";
+width: 20px;
+height: 20px;
+display: flex;
+justify-content: center;
+text-align: center;
+background-image: url('/images/majesticons_ship.svg'); 
+margin-right: 15px;
+}
+.vacancies-item__contract::before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-image: url('/images/ion_document-text.svg'); 
+  margin-right: 15px;
 }
 
 @import "_media";
