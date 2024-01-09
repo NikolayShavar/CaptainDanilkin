@@ -24,6 +24,9 @@
   @include media($lg-md) {
     transform: translateX(100%);
   }
+  @include media ($sm) {
+    max-width: 320px;
+  }
 }
 
 .header__logo {
@@ -47,7 +50,8 @@
   gap: 50px;
   align-items: center;
   @include media($md-sm) {
-    gap: 10px;
+    gap: 5px;
+    flex-direction: column;
   }
 }
 
@@ -116,15 +120,20 @@
   display: flex;
   justify-content: center;
 
+
   .search {
     background: none;
     border: none;
     color: #fff;
     max-width: 120px;
-
-    @include media($sm) {
+    @include media ($md-sm) {
       max-width: 50px;
     }
+
+    @include media($sm) {
+      max-width: 30px;
+    }
+
   }
 }
 .menu__list {
@@ -158,13 +167,21 @@
   }
 }
 
+
+
+
+
 .main__slider-bg {
   background-image: url(/images/bgmain.png);
-  height: 900px;
+ height: 900px;
   width: 100%;
   position: relative;
   top: 0;
   z-index: -1;
+ @include media ($sm){
+height: 785px;
+
+ }
 }
 
 .main__slider {
@@ -172,7 +189,11 @@
   position: absolute;
   padding-top: 250px;
   color: #fff;
-  height: 630px;
+  max-height: 630px;
+  @include media ($md){
+    padding-top: 175px;
+  }
+
 }
 
 .main__slider-info {
@@ -240,6 +261,7 @@
   @include media($md) {
     bottom: 20px;
   }
+
   li {
     list-style: none;
     font-size: 14px;
@@ -260,7 +282,10 @@
   }
   @include media($sm) {
     right: 0;
-    bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    bottom: 0;
   }
 }
 
@@ -274,21 +299,26 @@
   line-height: 140%;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+  @include media ($sm){
+    text-wrap: wrap;
+  }
 }
 
 .news {
   position: relative;
   width: 100%;
-  max-height: 777px;
 
   &-box {
     display: block;
     padding-top: 137px;
     padding-bottom: 160px;
-    @include media($lg-md) {
-      padding-top: 20px;
-      padding-bottom: 0;
+
+    @include media ($lg){
+      padding-top: 0;
+      padding-bottom: 10px;
     }
+
+
     &__top {
       display: flex;
       position: relative;
@@ -300,6 +330,9 @@
         font-weight: 400;
         line-height: 140%;
         letter-spacing: 1.8px;
+        @include media ($sm){
+          font-size: 30px
+        }
       }
 
       .news-allnews {
@@ -315,6 +348,9 @@
           text-align: center;
           align-items: center;
           height: 100%;
+          @include media ($sm){
+            font-size: 15px;
+          }
         }
       }
     }
@@ -329,6 +365,13 @@
   @include media($xl-lg) {
     gap: 2px;
   }
+  @include media($lg) {
+    grid-template-columns: repeat(2, 2fr);
+    gap: 5px;
+  }
+  @include media ($sm){
+    grid-template-columns: repeat(1,4fr);
+  }
 
   .news-item {
     height: 306px;
@@ -338,7 +381,10 @@
     right: 0;
     margin: 0 auto;
     @include media($md-sm) {
-      width: 235px;
+      max-width: 235px;
+    }
+    @include media ($sm){
+      max-width: 295px;
     }
 
     .news-date {
@@ -387,10 +433,7 @@
       }
     }
   }
-  @include media($lg) {
-    grid-template-columns: repeat(2, 2fr);
-    gap: 5px;
-  }
+
 }
 .news1 {
   background-image: url(../images/news1.png);
@@ -418,6 +461,10 @@
   @include media($lg) {
     margin-top: 30px;
   }
+  @include media($sm) {
+    margin-top: 5px;
+  }
+
   &-bg {
     background-color: #133d8d;
   }
@@ -446,6 +493,9 @@
     line-height: 140%;
     letter-spacing: 1.8px;
     text-transform: uppercase;
+    @include media($sm) {
+    position: relative;
+    }
   }
   &-text {
     width: 526px;
@@ -456,6 +506,10 @@
     }
     @include media($lg-md) {
       margin-top: 50px;
+    }
+    @include media($sm) {
+margin-top: auto;
+margin-bottom: 15px;
     }
   }
 }
@@ -624,23 +678,25 @@
     padding-left: 0;
     padding-bottom: 0;
   }
+  @include media($sm){
+    position: relative;
+  }
+
   .history__point {
     list-style-type: square;
     font-size: 16px;
     line-height: 140%;
+    @include media($md){
+      margin-left: 12px;
+    }
   }
+  
 }
 
 .publication {
   position: relative;
   width: 100%;
-  max-height: 777px;
-  @include media($lg) {
-    max-height: 1200px;
-  }
-  @include media($lg-md) {
-    max-height: 1245px;
-  }
+
   &-box {
     display: block;
     padding-top: 137px;
@@ -648,6 +704,9 @@
     @include media($lg-md) {
       padding-top: 20px;
       padding-bottom: 10px;
+    }
+    @include media ($sm){
+      padding-top: 0;
     }
     &__top {
       display: flex;
@@ -660,6 +719,10 @@
         font-weight: 400;
         line-height: 140%;
         letter-spacing: 1.8px;
+        @include media ($sm){
+          font-size: 20px;
+          padding-top: 5px;
+        }
       }
 
       .publication-allpublication {
@@ -675,6 +738,9 @@
           text-align: center;
           align-items: center;
           height: 100%;
+          @include media ($sm){
+            font-size: 12px;
+          }
         }
       }
     }
@@ -695,6 +761,9 @@
   }
   @include media($md) {
     gap: 4px;
+  }
+  @include media ($sm) {
+    grid-template-columns: repeat(1, 4fr);
   }
 }
 .publication-item {
@@ -783,11 +852,17 @@
     font-weight: 400;
     line-height: 140%;
     letter-spacing: 1.8px;
+    
+    @include media  ($sm){
+      font-size: 20px;
+      padding-top: 5px;
+    }
   }
 }
 .projects-buttons {
   display: inline-flex;
   margin: auto 0;
+  text-align: center;
 
   .all-projects {
     display: flex;
@@ -797,6 +872,10 @@
     font-size: 18px;
     letter-spacing: 0.9px;
     line-height: 140%;
+    @include media  ($sm) {
+      font-size: 12px;
+      padding-right: 5px;
+    }
     a {
       color: #333;
     }
@@ -851,6 +930,9 @@
     bottom: unset;
     top: 20%;
   }
+  @include media ($sm) {
+    top: 5%;
+  }
   &-text {
     font-size: 24px;
     font-weight: 700;
@@ -858,6 +940,9 @@
     letter-spacing: 1.2px;
     text-transform: uppercase;
     padding-bottom: 20px;
+    @include media ($sm){
+      padding-bottom: 15px;
+    }
   }
   &-text__after {
     font-size: 14px;
@@ -888,6 +973,7 @@
 .projects__characteristics {
   display: flex;
   background-color: #133d8d;
+  justify-content: center;
 }
 
 .projects__characteristics-lines {
@@ -902,6 +988,9 @@
     display: flex;
     padding-top: 5px;
     padding-left: 0;
+  }
+  @include media ($sm){
+    flex-direction: column;
   }
 }
 .projects__characteristics-line1,
@@ -973,6 +1062,10 @@
   @include media($md-sm) {
     bottom: 190px;
     left: 5px;
+  }
+  @include media ($sm) {
+    bottom: 380px;
+    left: 0;
   }
 }
 
@@ -1116,7 +1209,7 @@
 
 footer {
   background-color: #133d8d;
-  height: 442px;
+  max-height: 442px;
   @include media($lg-md) {
     height: auto;
     padding-bottom: 10px;
@@ -1141,6 +1234,10 @@ footer {
   gap: 24px;
   @include media($md-sm) {
     gap: 4px;
+  }
+  @include media ($sm) {
+    display: flex;
+    gap: 0;
   }
 }
 
@@ -1177,6 +1274,9 @@ footer {
       }
     }
   }
+  @include media ($sm){
+    display: none;
+  }
 }
 
 .footer__title {
@@ -1197,9 +1297,15 @@ footer {
   }
   .telephone {
     padding-top: 30px;
+    @include media ($sm){
+      padding-top: 0;
+    }
   }
   .mail {
     padding-top: 11px;
+    @include media ($sm){
+      padding-top: 0;
+    }
   }
 }
 
