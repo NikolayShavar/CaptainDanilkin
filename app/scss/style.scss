@@ -8,7 +8,6 @@
   max-width: 1294px;
   padding: 0 10px;
   margin: 0 auto;
-
 }
 .header {
   display: block;
@@ -16,6 +15,7 @@
   width: 100%;
   color: #fff;
   text-wrap: nowrap;
+  z-index: 2;
 }
 .header-blue {
   background-color: #133d8d;
@@ -1315,7 +1315,10 @@ footer {
 .map-box {
   position: relative;
   padding-top: 250px;
-  z-index: -1;
+  z-index: 1;
+  @include media ($md){
+    padding-top: 140px;
+  }
 }
 
 .page-title {
@@ -1335,15 +1338,25 @@ footer {
 
 .services-text {
   display: flex;
+  @include media ($xl-lg){
+
+  }
 }
 .services-text__main {
   max-width: 746px;
+  @include media ($xl-lg){
+    max-width: 700px;
+  }
+
+  @include media ($xl-lg){
+    max-width: 500px;
+  }
 }
 
 .services-front__text {
   border-left: 2px solid #bd0007;
   display: flex;
-  width: 746px;
+  max-width: 746px;
   padding: 5px 80px 5px 40px;
   align-items: center;
   margin-top: 60px;
@@ -1384,6 +1397,14 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 25px;
+  min-width: 150px;
+
+  @include media ($lg){
+position: relative;
+right: -10px;
+text-align: center;
+padding: 50px 5px 60px 5px;
+  }
 }
 .services-characteristics__title {
   font-size: 18px;
@@ -1395,6 +1416,9 @@ footer {
 
 .services-characteristics__colums {
   display: flex;
+  @include media ($lg){
+    flex-direction: column;
+  }
 }
 
 .services-characteristics__column {
@@ -1408,6 +1432,9 @@ footer {
   font-weight: 900;
   line-height: 140%;
   text-transform: uppercase;
+  @include media ($lg){
+
+  }
 }
 .services-characteristics__text {
   font-size: 14px;
