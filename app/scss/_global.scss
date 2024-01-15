@@ -32,6 +32,7 @@ a {
 .arrows {
   display: flex;
   gap: 10px;
+
 }
 .arrow-after,
 .arrow-next {
@@ -40,6 +41,7 @@ a {
   gap: 10px;
   background-color: #133d8d;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 .arrow-after {
   background-position: center;

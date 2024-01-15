@@ -885,6 +885,7 @@ margin-bottom: 15px;
 
 .projects__slider {
   padding-bottom: 150px;
+  width: 100%;
   text-align: center;
   @include media($md) {
     padding-bottom: 5px;
@@ -952,7 +953,8 @@ margin-bottom: 15px;
   }
 }
 
-.project1 {
+.project1,
+.oriject2 {
   position: relative;
   background-image: url(../images/projects-slider1.png);
   background-repeat: no-repeat;
@@ -1221,7 +1223,7 @@ footer {
   display: flex;
   position: absolute;
   margin-top: 60px;
-  left: calc(50% - 15px);
+  right: calc(50% - 50px);
   cursor: pointer;
   @include media($md-sm) {
     margin-top: 20px;
@@ -1291,6 +1293,10 @@ footer {
 .contacts {
   display: flex;
   text-align: right;
+@include media ($sm){
+  text-align: center;
+}
+
   .contacts-adress {
     display: flex;
     flex-direction: column;
@@ -1315,6 +1321,7 @@ footer {
 .map-box {
   position: relative;
   padding-top: 250px;
+  
   z-index: 1;
   @include media ($md){
     padding-top: 140px;
@@ -1329,6 +1336,11 @@ footer {
   letter-spacing: 1.6px;
   text-transform: uppercase;
   margin-bottom: 60px;
+  @include media ($sm){
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: auto;
+  }
 }
 
 .page-path {
@@ -1338,8 +1350,12 @@ footer {
 
 .services-text {
   display: flex;
-  @include media ($xl-lg){
+  @include media ($lg){
+    justify-content: center;
+  }
 
+  @include media ($sm){
+flex-direction: column;
   }
 }
 .services-text__main {
@@ -1348,9 +1364,7 @@ footer {
     max-width: 700px;
   }
 
-  @include media ($xl-lg){
-    max-width: 500px;
-  }
+
 }
 
 .services-front__text {
@@ -1361,6 +1375,9 @@ footer {
   align-items: center;
   margin-top: 60px;
   margin-bottom: 60px;
+  @include media ($sm){
+    margin: auto;
+  }
   p {
     font-size: 14px;
     font-weight: 400;
@@ -1384,6 +1401,9 @@ footer {
   font-weight: 400;
   line-height: 140%;
   margin-bottom: 60px;
+  @include media ($sm) {
+    margin: auto;
+  }
 }
 
 .services-characteristics {
@@ -1404,6 +1424,14 @@ position: relative;
 right: -10px;
 text-align: center;
 padding: 50px 5px 60px 5px;
+align-items: center;
+  }
+  @include media ($sm){
+    right: 0;
+    width: 100%;
+background-color: #fff;
+color: #133d8d;
+padding: 25px 5px 25px 5px;
   }
 }
 .services-characteristics__title {
@@ -1432,8 +1460,8 @@ padding: 50px 5px 60px 5px;
   font-weight: 900;
   line-height: 140%;
   text-transform: uppercase;
-  @include media ($lg){
-
+  @include media ($md){
+font-size: 50px;
   }
 }
 .services-characteristics__text {
