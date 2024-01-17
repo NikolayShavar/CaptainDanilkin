@@ -25,7 +25,7 @@
   @include media($lg-md) {
     transform: translateX(100%);
   }
-  @include media ($sm) {
+  @include media($sm) {
     max-width: 320px;
   }
 }
@@ -121,20 +121,18 @@
   display: flex;
   justify-content: center;
 
-
   .search {
     background: none;
     border: none;
     color: #fff;
     max-width: 120px;
-    @include media ($md-sm) {
+    @include media($md-sm) {
       max-width: 50px;
     }
 
     @include media($sm) {
       max-width: 30px;
     }
-
   }
 }
 .menu__list {
@@ -168,21 +166,16 @@
   }
 }
 
-
-
-
-
 .main__slider-bg {
   background-image: url(/images/bgmain.png);
- height: 900px;
+  height: 900px;
   width: 100%;
   position: relative;
   top: 0;
   z-index: -1;
- @include media ($sm){
-height: 785px;
-
- }
+  @include media($sm) {
+    height: 785px;
+  }
 }
 
 .main__slider {
@@ -191,10 +184,9 @@ height: 785px;
   padding-top: 250px;
   color: #fff;
   max-height: 630px;
-  @include media ($md){
+  @include media($md) {
     padding-top: 175px;
   }
-
 }
 
 .main__slider-info {
@@ -300,7 +292,7 @@ height: 785px;
   line-height: 140%;
   letter-spacing: 0.7px;
   text-transform: uppercase;
-  @include media ($sm){
+  @include media($sm) {
     text-wrap: wrap;
   }
 }
@@ -314,11 +306,10 @@ height: 785px;
     padding-top: 137px;
     padding-bottom: 160px;
 
-    @include media ($lg){
+    @include media($lg) {
       padding-top: 0;
       padding-bottom: 10px;
     }
-
 
     &__top {
       display: flex;
@@ -331,8 +322,8 @@ height: 785px;
         font-weight: 400;
         line-height: 140%;
         letter-spacing: 1.8px;
-        @include media ($sm){
-          font-size: 30px
+        @include media($sm) {
+          font-size: 30px;
         }
       }
 
@@ -349,7 +340,7 @@ height: 785px;
           text-align: center;
           align-items: center;
           height: 100%;
-          @include media ($sm){
+          @include media($sm) {
             font-size: 15px;
           }
         }
@@ -370,8 +361,8 @@ height: 785px;
     grid-template-columns: repeat(2, 2fr);
     gap: 5px;
   }
-  @include media ($sm){
-    grid-template-columns: repeat(1,4fr);
+  @include media($sm) {
+    grid-template-columns: repeat(1, 4fr);
   }
 
   .news-item {
@@ -384,7 +375,7 @@ height: 785px;
     @include media($md-sm) {
       max-width: 235px;
     }
-    @include media ($sm){
+    @include media($sm) {
       max-width: 295px;
     }
 
@@ -434,7 +425,6 @@ height: 785px;
       }
     }
   }
-
 }
 .news1 {
   background-image: url(../images/news1.png);
@@ -495,7 +485,7 @@ height: 785px;
     letter-spacing: 1.8px;
     text-transform: uppercase;
     @include media($sm) {
-    position: relative;
+      position: relative;
     }
   }
   &-text {
@@ -509,8 +499,8 @@ height: 785px;
       margin-top: 50px;
     }
     @include media($sm) {
-margin-top: auto;
-margin-bottom: 15px;
+      margin-top: auto;
+      margin-bottom: 15px;
     }
   }
 }
@@ -679,7 +669,7 @@ margin-bottom: 15px;
     padding-left: 0;
     padding-bottom: 0;
   }
-  @include media($sm){
+  @include media($sm) {
     position: relative;
   }
 
@@ -687,11 +677,10 @@ margin-bottom: 15px;
     list-style-type: square;
     font-size: 16px;
     line-height: 140%;
-    @include media($md){
+    @include media($md) {
       margin-left: 12px;
     }
   }
-  
 }
 
 .publication {
@@ -706,7 +695,7 @@ margin-bottom: 15px;
       padding-top: 20px;
       padding-bottom: 10px;
     }
-    @include media ($sm){
+    @include media($sm) {
       padding-top: 0;
     }
     &__top {
@@ -720,7 +709,7 @@ margin-bottom: 15px;
         font-weight: 400;
         line-height: 140%;
         letter-spacing: 1.8px;
-        @include media ($sm){
+        @include media($sm) {
           font-size: 20px;
           padding-top: 5px;
         }
@@ -739,7 +728,7 @@ margin-bottom: 15px;
           text-align: center;
           align-items: center;
           height: 100%;
-          @include media ($sm){
+          @include media($sm) {
             font-size: 12px;
           }
         }
@@ -763,7 +752,7 @@ margin-bottom: 15px;
   @include media($md) {
     gap: 4px;
   }
-  @include media ($sm) {
+  @include media($sm) {
     grid-template-columns: repeat(1, 4fr);
   }
 }
@@ -853,8 +842,8 @@ margin-bottom: 15px;
     font-weight: 400;
     line-height: 140%;
     letter-spacing: 1.8px;
-    
-    @include media  ($sm){
+
+    @include media($sm) {
       font-size: 20px;
       padding-top: 5px;
     }
@@ -873,7 +862,7 @@ margin-bottom: 15px;
     font-size: 18px;
     letter-spacing: 0.9px;
     line-height: 140%;
-    @include media  ($sm) {
+    @include media($sm) {
       font-size: 12px;
       padding-right: 5px;
     }
@@ -890,22 +879,22 @@ margin-bottom: 15px;
   @include media($md) {
     padding-bottom: 5px;
   }
-  &-item {
-    display: flex;
-    left: 0;
-    position: relative;
-    width: 706px;
-    height: 600px;
-    @include media($lg-md) {
-      width: 460px;
-    }
-    @include media($md) {
-      width: 300px;
-    }
-    @include media($md-sm) {
-      width: auto;
-      height: 350px;
-    }
+}
+.projects__slider-item {
+  display: flex;
+  left: 0;
+  position: relative;
+  width: 706px;
+  height: 600px;
+  @include media($lg-md) {
+    width: 460px;
+  }
+  @include media($md) {
+    width: 300px;
+  }
+  @include media($md-sm) {
+    width: auto;
+    height: 350px;
   }
 }
 
@@ -932,7 +921,7 @@ margin-bottom: 15px;
     bottom: unset;
     top: 20%;
   }
-  @include media ($sm) {
+  @include media($sm) {
     top: 5%;
   }
   &-text {
@@ -942,7 +931,7 @@ margin-bottom: 15px;
     letter-spacing: 1.2px;
     text-transform: uppercase;
     padding-bottom: 20px;
-    @include media ($sm){
+    @include media($sm) {
       padding-bottom: 15px;
     }
   }
@@ -992,7 +981,7 @@ margin-bottom: 15px;
     padding-top: 5px;
     padding-left: 0;
   }
-  @include media ($sm){
+  @include media($sm) {
     flex-direction: column;
   }
 }
@@ -1066,13 +1055,14 @@ margin-bottom: 15px;
     bottom: 190px;
     left: 5px;
   }
-  @include media ($sm) {
+  @include media($sm) {
     bottom: 380px;
     left: 0;
   }
 }
 
 .development {
+  position: relative;
   .container {
     padding: 0;
     width: 100%;
@@ -1183,33 +1173,34 @@ margin-bottom: 15px;
   width: 100%;
 }
 
-.development-previous {
-  position: absolute;
-  top: 50%;
-  left: -65px;
-  @include media($lg-development) {
-    left: 10px;
-  }
-  @include media($md-sm) {
-    left: 5px;
-    top: 5px;
-  }
+.development__slider-info{
+
+    .arrows {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 50%;
+      gap: 90%;
+      z-index: 5;
+@include media ($lg-md){
+gap: 80%;
 }
-
-.development-next {
-  position: absolute;
-  top: 50%;
-  right: -65px;
-
-  @include media($lg-development) {
-    right: 10px;
-  }
-  @include media($md-sm) {
-    right: 5px;
-    top: 5px;
-  }
+@include media ($md-sm){
+  gap: 5px;
+  top: 95%;
 }
-
+      .development-previous {
+        left: 0;
+      }
+      .development-next {
+        right: 0;
+      }
+    }
+  
+}
 footer {
   background-color: #133d8d;
   max-height: 442px;
@@ -1238,7 +1229,7 @@ footer {
   @include media($md-sm) {
     gap: 4px;
   }
-  @include media ($sm) {
+  @include media($sm) {
     display: flex;
     gap: 0;
   }
@@ -1277,7 +1268,7 @@ footer {
       }
     }
   }
-  @include media ($sm){
+  @include media($sm) {
     display: none;
   }
 }
@@ -1293,9 +1284,9 @@ footer {
 .contacts {
   display: flex;
   text-align: right;
-@include media ($sm){
-  text-align: center;
-}
+  @include media($sm) {
+    text-align: center;
+  }
 
   .contacts-adress {
     display: flex;
@@ -1304,13 +1295,13 @@ footer {
   }
   .telephone {
     padding-top: 30px;
-    @include media ($sm){
+    @include media($sm) {
       padding-top: 0;
     }
   }
   .mail {
     padding-top: 11px;
-    @include media ($sm){
+    @include media($sm) {
       padding-top: 0;
     }
   }
@@ -1321,9 +1312,9 @@ footer {
 .map-box {
   position: relative;
   padding-top: 250px;
-  
+
   z-index: 1;
-  @include media ($md){
+  @include media($md) {
     padding-top: 140px;
   }
 }
@@ -1336,7 +1327,7 @@ footer {
   letter-spacing: 1.6px;
   text-transform: uppercase;
   margin-bottom: 60px;
-  @include media ($sm){
+  @include media($sm) {
     font-size: 25px;
     text-align: center;
     margin-bottom: auto;
@@ -1350,21 +1341,19 @@ footer {
 
 .services-text {
   display: flex;
-  @include media ($lg){
+  @include media($lg) {
     justify-content: center;
   }
 
-  @include media ($sm){
-flex-direction: column;
+  @include media($sm) {
+    flex-direction: column;
   }
 }
 .services-text__main {
   max-width: 746px;
-  @include media ($xl-lg){
+  @include media($xl-lg) {
     max-width: 700px;
   }
-
-
 }
 
 .services-front__text {
@@ -1375,7 +1364,7 @@ flex-direction: column;
   align-items: center;
   margin-top: 60px;
   margin-bottom: 60px;
-  @include media ($sm){
+  @include media($sm) {
     margin: auto;
   }
   p {
@@ -1401,7 +1390,7 @@ flex-direction: column;
   font-weight: 400;
   line-height: 140%;
   margin-bottom: 60px;
-  @include media ($sm) {
+  @include media($sm) {
     margin: auto;
   }
 }
@@ -1419,19 +1408,19 @@ flex-direction: column;
   gap: 25px;
   min-width: 150px;
 
-  @include media ($lg){
-position: relative;
-right: -10px;
-text-align: center;
-padding: 50px 5px 60px 5px;
-align-items: center;
+  @include media($lg) {
+    position: relative;
+    right: -10px;
+    text-align: center;
+    padding: 50px 5px 60px 5px;
+    align-items: center;
   }
-  @include media ($sm){
+  @include media($sm) {
     right: 0;
     width: 100%;
-background-color: #fff;
-color: #133d8d;
-padding: 25px 5px 25px 5px;
+    background-color: #fff;
+    color: #133d8d;
+    padding: 25px 5px 25px 5px;
   }
 }
 .services-characteristics__title {
@@ -1444,7 +1433,7 @@ padding: 25px 5px 25px 5px;
 
 .services-characteristics__colums {
   display: flex;
-  @include media ($lg){
+  @include media($lg) {
     flex-direction: column;
   }
 }
@@ -1460,8 +1449,8 @@ padding: 25px 5px 25px 5px;
   font-weight: 900;
   line-height: 140%;
   text-transform: uppercase;
-  @include media ($md){
-font-size: 50px;
+  @include media($md) {
+    font-size: 50px;
   }
 }
 .services-characteristics__text {
@@ -1491,26 +1480,26 @@ font-size: 50px;
   padding-top: 60px;
   position: relative;
 }
-.vacancies-box:last-child{
-padding-bottom: 150px;
+.vacancies-box:last-child {
+  padding-bottom: 150px;
 }
 
 .vacancies-items {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   gap: 24px;
-  @include media ($lg-md){
+  @include media($lg-md) {
     gap: 5px;
   }
-  @include media ($md){
+  @include media($md) {
     grid-template-columns: repeat(2, 3fr);
   }
-  @include media ($sm){
+  @include media($sm) {
     grid-template-columns: repeat(1, 6fr);
   }
 
   .vacancies-item {
-    border: 1px solid rgba(51, 51, 51, 0.30);
+    border: 1px solid rgba(51, 51, 51, 0.3);
     padding: 35px 40px;
     display: flex;
     flex-direction: column;
@@ -1522,7 +1511,7 @@ padding-bottom: 150px;
       text-transform: uppercase;
       padding-bottom: 25px;
     }
-    &__vessel{
+    &__vessel {
       display: flex;
       font-size: 14px;
       font-weight: 500;
@@ -1554,24 +1543,24 @@ padding-bottom: 150px;
     }
   }
 }
-.vacancies-item__vessel::before{
-content: "";
-width: 20px;
-height: 20px;
-display: flex;
-justify-content: center;
-text-align: center;
-background-image: url('/images/majesticons_ship.svg'); 
-margin-right: 15px;
-}
-.vacancies-item__contract::before{
+.vacancies-item__vessel::before {
   content: "";
   width: 20px;
   height: 20px;
   display: flex;
   justify-content: center;
   text-align: center;
-  background-image: url('/images/ion_document-text.svg'); 
+  background-image: url("/images/majesticons_ship.svg");
+  margin-right: 15px;
+}
+.vacancies-item__contract::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/images/ion_document-text.svg");
   margin-right: 15px;
 }
 
