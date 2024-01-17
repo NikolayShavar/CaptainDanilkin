@@ -10,5 +10,5 @@ $(".single-item").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   prevArrow: $('.arrow-after.projects-before'),
-    nextArrow: $('.arrow-next.projects-next'),
+  nextArrow: $('.arrow-next.projects-next'),
 });
